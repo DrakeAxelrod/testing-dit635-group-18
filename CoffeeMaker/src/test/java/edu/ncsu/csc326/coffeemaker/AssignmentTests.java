@@ -14,8 +14,7 @@ import java.lang.reflect.Method;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-public class CoffeeMakerTest {
-
+public class AssignmentTests {
 	private CoffeeMaker cm;
 	private Recipe r1;
 	private Recipe r2;
