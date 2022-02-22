@@ -5,11 +5,13 @@ import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.lang.reflect.Method;
+import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -60,11 +62,14 @@ public class CoffeeMakerTest {
 	}
 
 	@Test
-	public void testAddNewRecipeWithExistingName() {
-		cm.addRecipe(r1);
-		cm.addRecipe(r1);
-		Recipe recipes[] = cm.getRecipes();
-		assertEquals(null, recipes[1]);
+	public void testRecipeBookIndexOutOfBounds() {
+		assertDoesNotThrow(() -> {
+			IntStream.range(0, 5).forEachOrdered(n -> {
+				cm.addRecipe(new Recipe());
+			});
+			Recipe recipes[] = cm.getRecipes();
+			return recipes[5];
+		}, "threw an exception - Index out of bounds");
 	}
 
 	@Test

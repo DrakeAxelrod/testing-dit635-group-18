@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.188" tests="17" errors="0" skipped="0" failures="7">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.134" tests="16" errors="0" skipped="0" failures="7">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter8300996690902444978.jar /home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire 2022-02-22T13-42-45_632-jvmRun1 surefire12967002523099259037tmp surefire_04462878671943783144tmp"/>
+    <property name="sun.java.command" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter3773250559608178374.jar /home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire 2022-02-22T14-22-51_702-jvmRun1 surefire18043689383751680406tmp surefire_05675026613607223176tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/test-classes:/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/classes:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/draxel/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/draxel/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-runner/1.6.0/junit-platform-runner-1.6.0.jar:/home/draxel/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-launcher/1.6.0/junit-platform-launcher-1.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-suite-api/1.6.0/junit-platform-suite-api-1.6.0.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter8300996690902444978.jar"/>
+    <property name="surefire.real.class.path" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter3773250559608178374.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.1+12"/>
     <property name="user.name" value="draxel"/>
@@ -51,35 +51,34 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="RecipeExceptionThrown_thenExpectationSatisfied" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.067"/>
-  <testcase name="addFailedRecipeThenPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
+  <testcase name="addFailedRecipeThenPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.045"/>
   <testcase name="testDeleteAndTryPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
-  <testcase name="testInventoryIsUpdatedAfterAdding" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.02">
+  <testcase name="testInventoryIsUpdatedAfterAdding" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.015">
     <failure message="Inventory failed to update" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Inventory failed to update
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterAdding(CoffeeMakerTest.java:145)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterAdding(CoffeeMakerTest.java:143)
 </failure>
   </testcase>
-  <testcase name="testShouldFailEditRecipeUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
+  <testcase name="testShouldFailEditRecipeUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.005"/>
   <testcase name="testAddNewRecipeWithLargeNumbers" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.005">
-    <failure message="expected: java.lang.String@561b6512&lt;1000000&gt; but was: java.lang.Integer@2e377400&lt;1000000&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: java.lang.String@561b6512<1000000> but was: java.lang.Integer@2e377400<1000000>
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testAddNewRecipeWithLargeNumbers(CoffeeMakerTest.java:90)
+    <failure message="expected: java.lang.String@f79e&lt;1000000&gt; but was: java.lang.Integer@7ee8290b&lt;1000000&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: java.lang.String@f79e<1000000> but was: java.lang.Integer@7ee8290b<1000000>
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testAddNewRecipeWithLargeNumbers(CoffeeMakerTest.java:95)
 ]]></failure>
   </testcase>
-  <testcase name="testDeleteRecipe" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004">
+  <testcase name="testDeleteRecipe" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003">
     <failure message="expected: &lt;Mocha&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Mocha> but was: <>
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testDeleteRecipe(CoffeeMakerTest.java:106)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testDeleteRecipe(CoffeeMakerTest.java:104)
 ]]></failure>
   </testcase>
-  <testcase name="testEditRecipeWithCorrectInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
-  <testcase name="testAddNewRecipeWithAllParameters" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
-  <testcase name="testAddNegativeAmountsToInventory" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
-  <testcase name="testAddNewRecipeWithExistingName" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
+  <testcase name="testEditRecipeWithCorrectInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
+  <testcase name="testAddNewRecipeWithAllParameters" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
+  <testcase name="testAddNegativeAmountsToInventory" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
+  <testcase name="testAddRecipeWithEmptyParameter" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
   <testcase name="purchaseUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.005">
     <failure message="Unexpected exception type thrown ==&gt; expected: &lt;java.lang.NumberFormatException&gt; but was: &lt;java.lang.NoSuchMethodException&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.NumberFormatException> but was: <java.lang.NoSuchMethodException>
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:207)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:205)
 Caused by: java.lang.NoSuchMethodException: edu.ncsu.csc326.coffeemaker.Main.recipeListSelection()
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$4(CoffeeMakerTest.java:211)
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:207)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$5(CoffeeMakerTest.java:209)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:205)
 ]]></failure>
   </testcase>
   <testcase name="testShouldFailAddLargeAmountsToInventory" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002">
@@ -93,11 +92,19 @@ Milk: 1000015
 Sugar: 15
 Chocolate: 100015
 >
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testShouldFailAddLargeAmountsToInventory(CoffeeMakerTest.java:170)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testShouldFailAddLargeAmountsToInventory(CoffeeMakerTest.java:168)
 ]]></failure>
   </testcase>
+  <testcase name="testRecipeBookIndexOutOfBounds" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.008">
+    <failure message="threw an exception - Index out of bounds ==&gt; Unexpected exception thrown: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: threw an exception - Index out of bounds ==> Unexpected exception thrown: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:66)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$0(CoffeeMakerTest.java:71)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:66)
+</failure>
+  </testcase>
   <testcase name="testDeleteRecipeThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testInventoryIsUpdatedAfterPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002">
+  <testcase name="testInventoryIsUpdatedAfterPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001">
     <failure message="expected: &lt;Coffee: 12&#10;Milk: 14&#10;Sugar: 14&#10;Chocolate: 15&#10;&gt; but was: &lt;Coffee: 18&#10;Milk: 14&#10;Sugar: 14&#10;Chocolate: 15&#10;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
 expected: <Coffee: 12
 Milk: 14
@@ -108,13 +115,8 @@ Milk: 14
 Sugar: 14
 Chocolate: 15
 >
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterPurchase(CoffeeMakerTest.java:158)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterPurchase(CoffeeMakerTest.java:156)
 ]]></failure>
   </testcase>
-  <testcase name="testPurchaseItemThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
-  <testcase name="testAddInventoryWithLargeNumbers" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003">
-    <failure message="Expected edu.ncsu.csc326.coffeemaker.exceptions.InventoryException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected edu.ncsu.csc326.coffeemaker.exceptions.InventoryException to be thrown, but nothing was thrown.
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testAddInventoryWithLargeNumbers(CoffeeMakerTest.java:95)
-</failure>
-  </testcase>
+  <testcase name="testPurchaseItemThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
 </testsuite>
