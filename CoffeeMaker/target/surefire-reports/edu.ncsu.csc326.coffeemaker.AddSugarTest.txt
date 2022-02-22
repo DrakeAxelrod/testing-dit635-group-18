@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: edu.ncsu.csc326.coffeemaker.AddSugarTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! - in edu.ncsu.csc326.coffeemaker.AddSugarTest
-testAddSugarNegativeNumber  Time elapsed: 0.001 s  <<< FAILURE!
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in edu.ncsu.csc326.coffeemaker.AddSugarTest
+testAddSugarNegativeNumber  Time elapsed: 0 s  <<< FAILURE!
 java.lang.AssertionError: expected edu.ncsu.csc326.coffeemaker.exceptions.InventoryException to be thrown, but nothing was thrown
-	at edu.ncsu.csc326.coffeemaker.AddSugarTest.testAddSugarNegativeNumber(AddSugarTest.java:34)
+	at edu.ncsu.csc326.coffeemaker.AddSugarTest.testAddSugarNegativeNumber(AddSugarTest.java:33)
 
 testAddSugarPositiveNumber  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Failed to add sugar.
-	at edu.ncsu.csc326.coffeemaker.AddSugarTest.testAddSugarPositiveNumber(AddSugarTest.java:27)
+	at edu.ncsu.csc326.coffeemaker.AddSugarTest.testAddSugarPositiveNumber(AddSugarTest.java:26)
 

@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
 public class MakeCoffeeTest {
 
     private CoffeeMaker cm;
@@ -40,5 +42,24 @@ public class MakeCoffeeTest {
         cm.addRecipe(r);
         int change = cm.makeCoffee(0, 15);
         assertEquals(5, change);
+    }
+    
+    @Test
+    public void testMakeWithLower() {
+        cm.addRecipe(r);
+        int change = cm.makeCoffee(0, 8);
+        assertEquals(8, change);
+    }
+
+    @Test
+    public void testMakeWithNoInventory() {
+        try {
+            r.setAmtCoffee("16");
+            cm.addRecipe(r);
+        } catch (Exception e) {
+            fail("");
+        }
+        int change = cm.makeCoffee(0, 10);
+        assertEquals(10, change);
     }
 }

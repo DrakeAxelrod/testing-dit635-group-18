@@ -1,66 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.161" tests="16" errors="0" skipped="0" failures="7">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.128" tests="16" errors="0" skipped="0" failures="7">
   <properties>
-    <property name="java.specification.version" value="17"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/test-classes:/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/classes:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/draxel/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/draxel/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-runner/1.6.0/junit-platform-runner-1.6.0.jar:/home/draxel/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-launcher/1.6.0/junit-platform-launcher-1.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-suite-api/1.6.0/junit-platform-suite-api-1.6.0.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:"/>
+    <property name="java.class.path" value="/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker/target/test-classes:/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker/target/classes:/home/vernita/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/vernita/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/vernita/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/vernita/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/vernita/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-runner/1.6.0/junit-platform-runner-1.6.0.jar:/home/vernita/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-launcher/1.6.0/junit-platform-launcher-1.6.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-suite-api/1.6.0/junit-platform-suite-api-1.6.0.jar:/home/vernita/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/vernita/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/vernita/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
     <property name="os.name" value="Linux"/>
-    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter5125391998871342641.jar /home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire 2022-02-22T15-50-22_284-jvmRun1 surefire16191696454263377602tmp surefire_010659329964523982309tmp"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk/lib"/>
+    <property name="sun.java.command" value="/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter8361646879601911233.jar /home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker/target/surefire 2022-02-22T17-22-51_684-jvmRun1 surefire6019160432637385949tmp surefire_08721582472308482514tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/test-classes:/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/classes:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/draxel/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/draxel/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/draxel/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-runner/1.6.0/junit-platform-runner-1.6.0.jar:/home/draxel/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-launcher/1.6.0/junit-platform-launcher-1.6.0.jar:/home/draxel/.m2/repository/org/junit/platform/junit-platform-suite-api/1.6.0/junit-platform-suite-api-1.6.0.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/draxel/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:"/>
+    <property name="surefire.test.class.path" value="/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker/target/test-classes:/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker/target/classes:/home/vernita/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/vernita/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/vernita/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/vernita/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/vernita/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-runner/1.6.0/junit-platform-runner-1.6.0.jar:/home/vernita/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-launcher/1.6.0/junit-platform-launcher-1.6.0.jar:/home/vernita/.m2/repository/org/junit/platform/junit-platform-suite-api/1.6.0/junit-platform-suite-api-1.6.0.jar:/home/vernita/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/vernita/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/vernita/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/home/draxel"/>
+    <property name="user.home" value="/home/vernita"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2021-10-19"/>
-    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="basedir" value="/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter5125391998871342641.jar"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker/target/surefire/surefirebooter8361646879601911233.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="17.0.1+12"/>
-    <property name="user.name" value="draxel"/>
+    <property name="java.runtime.version" value="11.0.13+8"/>
+    <property name="user.name" value="vernita"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="5.16.10-zen1-1-zen"/>
+    <property name="os.version" value="5.10.98-1-MANJARO"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="/home/draxel/.m2/repository"/>
+    <property name="localRepository" value="/home/vernita/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="java.version" value="17.0.1"/>
-    <property name="user.dir" value="/home/draxel/dev/misc/school/testing-dit635-group-18/CoffeeMaker"/>
+    <property name="java.version" value="11.0.13"/>
+    <property name="user.dir" value="/home/vernita/Desktop/testing-dit635-group-18/CoffeeMaker"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.vendor" value="N/A"/>
-    <property name="java.vm.version" value="17.0.1+12"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="11.0.13+8"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="61.0"/>
+    <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="addFailedRecipeThenPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.07"/>
-  <testcase name="testDeleteAndTryPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0"/>
-  <testcase name="testInventoryIsUpdatedAfterAdding" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.018">
+  <testcase name="addFailedRecipeThenPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.04"/>
+  <testcase name="testDeleteAndTryPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
+  <testcase name="testInventoryIsUpdatedAfterAdding" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.009">
     <failure message="Inventory failed to update" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Inventory failed to update
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterAdding(CoffeeMakerTest.java:142)
 </failure>
   </testcase>
   <testcase name="testShouldFailEditRecipeUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
-  <testcase name="testAddNewRecipeWithLargeNumbers" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004">
-    <failure message="expected: java.lang.String@68267da0&lt;1000000&gt; but was: java.lang.Integer@2638011&lt;1000000&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: java.lang.String@68267da0<1000000> but was: java.lang.Integer@2638011<1000000>
+  <testcase name="testAddNewRecipeWithLargeNumbers" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003">
+    <failure message="expected: java.lang.String@3f56875e&lt;1000000&gt; but was: java.lang.Integer@2b4bac49&lt;1000000&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: java.lang.String@3f56875e<1000000> but was: java.lang.Integer@2b4bac49<1000000>
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testAddNewRecipeWithLargeNumbers(CoffeeMakerTest.java:94)
 ]]></failure>
   </testcase>
@@ -70,14 +76,14 @@
 ]]></failure>
   </testcase>
   <testcase name="testEditRecipeWithCorrectInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testAddNewRecipeWithAllParameters" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
-  <testcase name="testAddNegativeAmountsToInventory" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
-  <testcase name="testAddRecipeWithEmptyParameter" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.007"/>
-  <testcase name="purchaseUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003">
+  <testcase name="testAddNewRecipeWithAllParameters" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
+  <testcase name="testAddNegativeAmountsToInventory" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
+  <testcase name="testAddRecipeWithEmptyParameter" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
+  <testcase name="purchaseUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002">
     <failure message="Unexpected exception type thrown ==&gt; expected: &lt;java.lang.NumberFormatException&gt; but was: &lt;java.lang.NoSuchMethodException&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.NumberFormatException> but was: <java.lang.NoSuchMethodException>
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:204)
 Caused by: java.lang.NoSuchMethodException: edu.ncsu.csc326.coffeemaker.Main.recipeListSelection()
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$5(CoffeeMakerTest.java:208)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$purchaseUsingTextInput$5(CoffeeMakerTest.java:208)
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:204)
 ]]></failure>
   </testcase>
@@ -95,16 +101,16 @@ Chocolate: 100015
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testShouldFailAddLargeAmountsToInventory(CoffeeMakerTest.java:167)
 ]]></failure>
   </testcase>
-  <testcase name="testRecipeBookIndexOutOfBounds" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.006">
+  <testcase name="testRecipeBookIndexOutOfBounds" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.005">
     <failure message="threw an exception - Index out of bounds ==&gt; Unexpected exception thrown: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: threw an exception - Index out of bounds ==> Unexpected exception thrown: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:65)
 Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$0(CoffeeMakerTest.java:70)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$testRecipeBookIndexOutOfBounds$1(CoffeeMakerTest.java:70)
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:65)
 </failure>
   </testcase>
-  <testcase name="testDeleteRecipeThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testInventoryIsUpdatedAfterPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002">
+  <testcase name="testDeleteRecipeThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
+  <testcase name="testInventoryIsUpdatedAfterPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003">
     <failure message="expected: &lt;Coffee: 12&#10;Milk: 14&#10;Sugar: 14&#10;Chocolate: 15&#10;&gt; but was: &lt;Coffee: 18&#10;Milk: 14&#10;Sugar: 14&#10;Chocolate: 15&#10;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
 expected: <Coffee: 12
 Milk: 14
@@ -118,5 +124,5 @@ Chocolate: 15
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterPurchase(CoffeeMakerTest.java:155)
 ]]></failure>
   </testcase>
-  <testcase name="testPurchaseItemThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
+  <testcase name="testPurchaseItemThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
 </testsuite>

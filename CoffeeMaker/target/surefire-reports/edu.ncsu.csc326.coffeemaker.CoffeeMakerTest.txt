@@ -1,24 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: edu.ncsu.csc326.coffeemaker.CoffeeMakerTest
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.161 s <<< FAILURE! - in edu.ncsu.csc326.coffeemaker.CoffeeMakerTest
-testInventoryIsUpdatedAfterAdding  Time elapsed: 0.018 s  <<< FAILURE!
+Tests run: 16, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.128 s <<< FAILURE! - in edu.ncsu.csc326.coffeemaker.CoffeeMakerTest
+testInventoryIsUpdatedAfterAdding  Time elapsed: 0.009 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Inventory failed to update
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterAdding(CoffeeMakerTest.java:142)
 
-testAddNewRecipeWithLargeNumbers  Time elapsed: 0.004 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: java.lang.String@68267da0<1000000> but was: java.lang.Integer@2638011<1000000>
+testAddNewRecipeWithLargeNumbers  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: java.lang.String@3f56875e<1000000> but was: java.lang.Integer@2b4bac49<1000000>
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testAddNewRecipeWithLargeNumbers(CoffeeMakerTest.java:94)
 
 testDeleteRecipe  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Mocha> but was: <>
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testDeleteRecipe(CoffeeMakerTest.java:103)
 
-purchaseUsingTextInput  Time elapsed: 0.003 s  <<< FAILURE!
+purchaseUsingTextInput  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.NumberFormatException> but was: <java.lang.NoSuchMethodException>
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:204)
 Caused by: java.lang.NoSuchMethodException: edu.ncsu.csc326.coffeemaker.Main.recipeListSelection()
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$5(CoffeeMakerTest.java:208)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$purchaseUsingTextInput$5(CoffeeMakerTest.java:208)
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:204)
 
 testShouldFailAddLargeAmountsToInventory  Time elapsed: 0.002 s  <<< FAILURE!
@@ -34,14 +34,14 @@ Chocolate: 100015
 >
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testShouldFailAddLargeAmountsToInventory(CoffeeMakerTest.java:167)
 
-testRecipeBookIndexOutOfBounds  Time elapsed: 0.006 s  <<< FAILURE!
+testRecipeBookIndexOutOfBounds  Time elapsed: 0.005 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: threw an exception - Index out of bounds ==> Unexpected exception thrown: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:65)
 Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$0(CoffeeMakerTest.java:70)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$testRecipeBookIndexOutOfBounds$1(CoffeeMakerTest.java:70)
 	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:65)
 
-testInventoryIsUpdatedAfterPurchase  Time elapsed: 0.002 s  <<< FAILURE!
+testInventoryIsUpdatedAfterPurchase  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 expected: <Coffee: 12
 Milk: 14

@@ -55,11 +55,39 @@ public class CoffeeMakerTest {
 
 	@Test
 	public void testAddNewRecipeWithAllParameters() {
-		cm.addRecipe(r1);
+		Recipe newRecipe = new Recipe();
+		newRecipe.setName("Coffee");
+		try {
+			newRecipe.setAmtCoffee("1");
+		} catch (RecipeException e) {
+			fail("Failed to set coffee");
+		}
+		try {
+			newRecipe.setAmtMilk("1");	
+		} catch (RecipeException e) {
+			fail("Failed to set Milk");
+		}
+		try {
+			newRecipe.setAmtSugar("1");
+		} catch (RecipeException e) {
+			fail("Failed to set Sugar");
+		}
+		try {
+			newRecipe.setAmtChocolate("1");
+		} catch (RecipeException e) {
+			fail("Failed to set Chocolate");
+		}
+		try {
+			newRecipe.setPrice("1");
+		} catch (RecipeException e) {
+			fail("Failed to set price");
+		}
+		cm.addRecipe(newRecipe);
 		Recipe recipes[] = cm.getRecipes();
 		assertEquals(r1, recipes[0]);
 	}
-
+	
+	
 	@Test
 	public void testRecipeBookIndexOutOfBounds() {
 		assertDoesNotThrow(() -> {
@@ -214,4 +242,65 @@ public class CoffeeMakerTest {
 			}
 		});
 	}
+	
+	//NEW TESTS ADD TO ASSIGNMENT
+		@Test
+		public void testRecipeWithDecimalCoffee() {
+			try {
+				r1.setAmtCoffee("0.5");
+			} catch (RecipeException e) {
+				fail("Failed to set coffee");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+		
+		@Test
+		public void testRecipeWithDecimalMilk() {
+			try {
+				r1.setAmtCoffee("0.5");
+			} catch (RecipeException e) {
+				fail("Failed to set milk");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+		
+		@Test
+		public void testRecipeWithDecimalSugar() {
+			try {
+				r1.setAmtMilk("0.5");
+			} catch (RecipeException e) {
+				fail("Failed to set sugar");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+		
+		@Test
+		public void testRecipeWithDecimalChocolate() {
+			try {
+				r1.setAmtChocolate("0.5");
+			} catch (RecipeException e) {
+				fail("Failed to set chocolate");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+		
+		@Test
+		public void testRecipeWithDecimalPrice() {
+			try {
+				r1.setPrice("0.5");
+			} catch (RecipeException e) {
+				fail("Failed to set price");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
 }
