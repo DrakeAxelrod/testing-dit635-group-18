@@ -20,7 +20,6 @@ public class CoffeeMakerTest {
 	private Recipe r1;
 	private Recipe r2;
 	private Recipe r3;
-	private Recipe r4;
 
 	@BeforeEach
 	public void setUp() throws Exception {
@@ -51,17 +50,6 @@ public class CoffeeMakerTest {
 		r3.setAmtMilk("1");
 		r3.setAmtSugar("1");
 		r3.setPrice("75");
-
-		// too big setup
-		/*r4 = new Recipe();
-		r4.setName("Cappucino");
-		r4.setAmtChocolate("f");
-		r4.setAmtCoffee("3");
-		r4.setAmtMilk("1");
-		r4.setAmtSugar("1");
-		r4.setPrice("75");
-		*/
-
 	}
 
 	@Test
@@ -76,11 +64,11 @@ public class CoffeeMakerTest {
 		cm.addRecipe(r1);
 		cm.addRecipe(r1);
 		Recipe recipes[] = cm.getRecipes();
-		assertEquals(1, recipes.length);
+		assertEquals(null, recipes[1]);
 	}
 
 	@Test
-	public void RecipeExceptionThrown_thenExpectationSatisfied() {
+	public void testAddRecipeWithEmptyParameter() {
 		Recipe r4 = new Recipe();
 		r4.setName("GoodOleJoe");
 		Exception exception = assertThrows(RecipeException.class, () -> {
@@ -88,7 +76,7 @@ public class CoffeeMakerTest {
 			r4.setAmtCoffee("3");
 			r4.setAmtMilk("1");
 			r4.setAmtSugar("1");
-			r4.setPrice("75");
+			r4.setPrice("20");
 		});
 		String expectedMessage = "must be a positive integer";
 		String actualMessage = exception.getMessage();
@@ -105,15 +93,16 @@ public class CoffeeMakerTest {
 	@Test
 	public void testDeleteRecipe() {
 		cm.addRecipe(r1);
-		String deleted = cm.deleteRecipe(0);
-		assertEquals("Mocha", deleted);
+		cm.addRecipe(r2);
+		cm.deleteRecipe(0);
+		Recipe recipes[] = cm.getRecipes();
+		assertEquals(r2, recipes[0]);
 	}
 
 	@Test
 	public void testDeleteRecipeThatDoesntExist() {
-		cm.addRecipe(r1);
 		cm.deleteRecipe(0);
-		//delete recipe returns null if there is nothing at that index
+		// delete recipe returns null if there is nothing at that index
 		assertEquals(null, cm.deleteRecipe(0));
 	}
 
@@ -122,28 +111,17 @@ public class CoffeeMakerTest {
 		cm.addRecipe(r1);
 		cm.deleteRecipe(0);
 		int money = cm.makeCoffee(1, 10); // here the 'change' is returned
-		assertEquals(10, money); // here there should be as much money as the user put in, because the purchase should fail
+		assertEquals(10, money); // here there should be as much money as the user put in, because the purchase
+									// should fail
 	}
 
 	@Test
 	public void testShouldFailEditRecipeUsingTextInput() {
-		cm.addRecipe(r1); 
-		 assertThrows(RecipeException.class, () -> {
-			cm.editRecipe(0, r4);
+		cm.addRecipe(r1);
+		assertThrows(RecipeException.class, () -> {
+			cm.getRecipes()[0].setAmtChocolate("f");
 		});
 	}
-
-// public synchronized String editRecipe(int recipeToEdit, Recipe newRecipe) {
-// 		if (recipeArray[recipeToEdit] != null) { it's not null though. cause it exists.It fails at the object creation
-// 			String recipeName = recipeArray[recipeToEdit].getName(); // it gets the name before the change
-// 			newRecipe.setName(""); // i mean the name is gonna be empty no natter what,...ok - null? XD
-// 			recipeArray[recipeToEdit] = newRecipe;
-// 			return recipeName;
-// 		} else {
-// 			return null;
-// 		}
-// 	}
-
 
 	@Test
 	public void testEditRecipeWithCorrectInput() {
@@ -152,30 +130,32 @@ public class CoffeeMakerTest {
 		assertEquals("Coffee", oldRecipe);
 	}
 
-	@Test // Sugar and chocolate is not added
-	public void testInventoryIsUpdatedAfterUpdate() {
+	@Test // Adding sugar would fail because the amount in the program takes 0 or less
+	public void testInventoryIsUpdatedAfterAdding() {
 		try {
 			cm.addInventory("1", "1", "1", "1");
-			String inventory = cm.checkInventory();
 		} catch (InventoryException e) {
-			fail(" ");
+			fail("Inventory failed to update");
 		}
+		String expected = ("Coffee: 16\nMilk: 16\nSugar: 16\nChocolate: 16\n");
+		String inventory = cm.checkInventory();
+		assertEquals(expected, inventory);
 	}
 
 	@Test
 	public void testInventoryIsUpdatedAfterPurchase() {
 		cm.addRecipe(r1);
-		String startInv = cm.checkInventory();
 		cm.makeCoffee(0, 10);
-		String currentInv = cm.checkInventory();
-		assertFalse(startInv.equals(currentInv));
+		String expected = "Coffee: 12\nMilk: 14\nSugar: 14\nChocolate: 15\n";
+		String inventory = cm.checkInventory();
+		assertEquals(expected, inventory);
 	}
 
 	@Test
-	public void testAddLargeAmountsToInventoryShouldFail() {
+	public void testShouldFailAddLargeAmountsToInventory() {
 		String currentInv = cm.checkInventory();
 		try {
-			cm.addInventory("1000000", "1000000", "1000000", "100000");
+			cm.addInventory("1000000", "1000000", "0", "100000");
 		} catch (Exception e) {
 			fail("No exception should be thrown");
 		}
@@ -185,8 +165,8 @@ public class CoffeeMakerTest {
 
 	@Test
 	public void testAddNegativeAmountsToInventory() {
-		 assertThrows(InventoryException.class, () -> {
-				cm.addInventory("-5", "0", "0", "0"); // testInventoryAdded NOOOOOOOO it is exactly what it says
+		assertThrows(InventoryException.class, () -> {
+			cm.addInventory("-5", "0", "0", "0"); // testInventoryAdded
 		});
 	}
 
@@ -220,8 +200,8 @@ public class CoffeeMakerTest {
 		assertThrows(NumberFormatException.class, () -> {
 			Main m = new Main();
 			Class<?>[] parameterType = null;
-			//yassssssss
-			Method method = Main.class.getDeclaredMethod("recipeListSelection", parameterType); 
+			// yassssssss
+			Method method = Main.class.getDeclaredMethod("recipeListSelection", parameterType);
 			method.setAccessible(true);
 			try {
 				method.invoke(m, "String");
