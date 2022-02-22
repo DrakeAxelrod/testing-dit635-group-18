@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc326.coffeemaker.AssignmentTests
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.026 s <<< FAILURE! - in edu.ncsu.csc326.coffeemaker.AssignmentTests
+testShouldFailEditRecipeUsingTextInput  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <edu.ncsu.csc326.coffeemaker.exceptions.InventoryException> but was: <edu.ncsu.csc326.coffeemaker.exceptions.RecipeException>
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testShouldFailEditRecipeUsingTextInput(AssignmentTests.java:134)
+Caused by: edu.ncsu.csc326.coffeemaker.exceptions.RecipeException: Units of chocolate must be a positive integer
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.lambda$1(AssignmentTests.java:135)
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testShouldFailEditRecipeUsingTextInput(AssignmentTests.java:134)
+
+testInventoryIsUpdatedAfterUpdate  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testInventoryIsUpdatedAfterUpdate(AssignmentTests.java:164)
+
+testAddNewRecipeWithLargeNumbers  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: java.lang.String@548e6d58<1000000> but was: java.lang.Integer@623a8092<1000000>
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testAddNewRecipeWithLargeNumbers(AssignmentTests.java:105)
+
+testDeleteRecipe  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Mocha> but was: <Coffee>
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testDeleteRecipe(AssignmentTests.java:112)
+
+testAddNewRecipeWithExistingName  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <4>
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testAddNewRecipeWithExistingName(AssignmentTests.java:82)
+
+purchaseUsingTextInput  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.NumberFormatException> but was: <java.lang.NoSuchMethodException>
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.purchaseUsingTextInput(AssignmentTests.java:225)
+Caused by: java.lang.NoSuchMethodException: edu.ncsu.csc326.coffeemaker.Main.recipeListSelection()
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.lambda$3(AssignmentTests.java:229)
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.purchaseUsingTextInput(AssignmentTests.java:225)
+
+testAddLargeAmountsToInventoryShouldFail  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: No exception should be thrown
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testAddLargeAmountsToInventoryShouldFail(AssignmentTests.java:183)
+
+testDeleteRecipeThatDoesntExist  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <>
+	at edu.ncsu.csc326.coffeemaker.AssignmentTests.testDeleteRecipeThatDoesntExist(AssignmentTests.java:120)
+

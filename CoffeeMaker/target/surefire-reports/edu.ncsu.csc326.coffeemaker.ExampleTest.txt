@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc326.coffeemaker.ExampleTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in edu.ncsu.csc326.coffeemaker.ExampleTest
+testAddInventoryException  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <edu.ncsu.csc326.coffeemaker.exceptions.InventoryException> but was: <java.lang.NullPointerException>
+	at edu.ncsu.csc326.coffeemaker.ExampleTest.testAddInventoryException(ExampleTest.java:81)
+Caused by: java.lang.NullPointerException: Cannot invoke "edu.ncsu.csc326.coffeemaker.CoffeeMaker.addInventory(String, String, String, String)" because "this.cm" is null
+	at edu.ncsu.csc326.coffeemaker.ExampleTest.lambda$testAddInventoryException$0(ExampleTest.java:83)
+	at edu.ncsu.csc326.coffeemaker.ExampleTest.testAddInventoryException(ExampleTest.java:81)
+
+testAddInventory_Normal  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "edu.ncsu.csc326.coffeemaker.CoffeeMaker.addInventory(String, String, String, String)" because "this.cm" is null
+	at edu.ncsu.csc326.coffeemaker.ExampleTest.testAddInventory_Normal(ExampleTest.java:69)
+
+testMakeCoffee_Normal  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "edu.ncsu.csc326.coffeemaker.CoffeeMaker.addRecipe(edu.ncsu.csc326.coffeemaker.Recipe)" because "this.cm" is null
+	at edu.ncsu.csc326.coffeemaker.ExampleTest.testMakeCoffee_Normal(ExampleTest.java:90)
+

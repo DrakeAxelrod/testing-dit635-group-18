@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import java.lang.reflect.Method;
 
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CoffeeMakerTest {
@@ -22,7 +22,7 @@ public class CoffeeMakerTest {
 	private Recipe r3;
 	private Recipe r4;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		cm = new CoffeeMaker();
 		// Set up for r1
@@ -53,27 +53,22 @@ public class CoffeeMakerTest {
 		r3.setPrice("75");
 
 		// too big setup
-		r4 = new Recipe();
+		/*r4 = new Recipe();
 		r4.setName("Cappucino");
 		r4.setAmtChocolate("f");
 		r4.setAmtCoffee("3");
 		r4.setAmtMilk("1");
 		r4.setAmtSugar("1");
 		r4.setPrice("75");
+		*/
 
 	}
 
 	@Test
 	public void testAddNewRecipeWithAllParameters() {
-		try {
-			cm.addInventory("2", "2", "2", "1"); // Coffee, Milk, Sugar, Chocolate
-		} catch (InventoryException e) {
-			fail("InventoryException should not be thrown");
-		}
-		String inventory = cm.checkInventory();
-		String expected = "Coffee: 17\nMilk: 17\nSugar: 15\nChocolate: 17\n";
-		// We start with 15 in inventory, then added some.
-		assertEquals(expected, inventory);
+		cm.addRecipe(r1);
+		Recipe recipes[] = cm.getRecipes();
+		assertEquals(r1, recipes[0]);
 	}
 
 	@Test
@@ -132,13 +127,10 @@ public class CoffeeMakerTest {
 
 	@Test
 	public void testShouldFailEditRecipeUsingTextInput() {
-		cm.addRecipe(r1); // Returns the name of the successfully edited recipe or null if the recipe cannot be edited.
-		cm.editRecipe(0, r4);
-		Recipe r[] = cm.getRecipes(); // youd have to test for the edited text
-		assertEquals("Coffee", r[0]);
-		//kk i'm moving on
-		//this is what it was. and it will work. because this will fail, then coffee will still be there, instead of cappucino
-		// r1 = mocha you edit it to be r4  yeah it's gonna bere sult wilnul be null? nowhatevs lo result should be sorry cappucino
+		cm.addRecipe(r1); 
+		 assertThrows(RecipeException.class, () -> {
+			cm.editRecipe(0, r4);
+		});
 	}
 
 // public synchronized String editRecipe(int recipeToEdit, Recipe newRecipe) {
@@ -191,8 +183,6 @@ public class CoffeeMakerTest {
 		assertEquals(currentInv, inventory);
 	}
 
-
-//there is an exception available for inventory on non-positive numbers
 	@Test
 	public void testAddNegativeAmountsToInventory() {
 		 assertThrows(InventoryException.class, () -> {
@@ -229,7 +219,7 @@ public class CoffeeMakerTest {
 		cm.addRecipe(r1);
 		assertThrows(NumberFormatException.class, () -> {
 			Main m = new Main();
-			Class[] parameterType = null;
+			Class<?>[] parameterType = null;
 			//yassssssss
 			Method method = Main.class.getDeclaredMethod("recipeListSelection", parameterType); 
 			method.setAccessible(true);
