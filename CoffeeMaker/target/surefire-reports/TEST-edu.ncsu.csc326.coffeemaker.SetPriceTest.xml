@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.161" tests="16" errors="0" skipped="0" failures="7">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0.023" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -51,72 +51,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="addFailedRecipeThenPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.07"/>
-  <testcase name="testDeleteAndTryPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0"/>
-  <testcase name="testInventoryIsUpdatedAfterAdding" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.018">
-    <failure message="Inventory failed to update" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Inventory failed to update
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterAdding(CoffeeMakerTest.java:142)
-</failure>
-  </testcase>
-  <testcase name="testShouldFailEditRecipeUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
-  <testcase name="testAddNewRecipeWithLargeNumbers" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004">
-    <failure message="expected: java.lang.String@68267da0&lt;1000000&gt; but was: java.lang.Integer@2638011&lt;1000000&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: java.lang.String@68267da0<1000000> but was: java.lang.Integer@2638011<1000000>
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testAddNewRecipeWithLargeNumbers(CoffeeMakerTest.java:94)
-]]></failure>
-  </testcase>
-  <testcase name="testDeleteRecipe" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002">
-    <failure message="expected: &lt;Mocha&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Mocha> but was: <>
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testDeleteRecipe(CoffeeMakerTest.java:103)
-]]></failure>
-  </testcase>
-  <testcase name="testEditRecipeWithCorrectInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testAddNewRecipeWithAllParameters" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002"/>
-  <testcase name="testAddNegativeAmountsToInventory" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
-  <testcase name="testAddRecipeWithEmptyParameter" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.007"/>
-  <testcase name="purchaseUsingTextInput" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003">
-    <failure message="Unexpected exception type thrown ==&gt; expected: &lt;java.lang.NumberFormatException&gt; but was: &lt;java.lang.NoSuchMethodException&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.NumberFormatException> but was: <java.lang.NoSuchMethodException>
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:204)
-Caused by: java.lang.NoSuchMethodException: edu.ncsu.csc326.coffeemaker.Main.recipeListSelection()
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$5(CoffeeMakerTest.java:208)
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.purchaseUsingTextInput(CoffeeMakerTest.java:204)
-]]></failure>
-  </testcase>
-  <testcase name="testShouldFailAddLargeAmountsToInventory" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002">
-    <failure message="expected: &lt;Coffee: 15&#10;Milk: 15&#10;Sugar: 15&#10;Chocolate: 15&#10;&gt; but was: &lt;Coffee: 1000015&#10;Milk: 1000015&#10;Sugar: 15&#10;Chocolate: 100015&#10;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
-expected: <Coffee: 15
-Milk: 15
-Sugar: 15
-Chocolate: 15
-> but was: <Coffee: 1000015
-Milk: 1000015
-Sugar: 15
-Chocolate: 100015
->
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testShouldFailAddLargeAmountsToInventory(CoffeeMakerTest.java:167)
-]]></failure>
-  </testcase>
-  <testcase name="testRecipeBookIndexOutOfBounds" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.006">
-    <failure message="threw an exception - Index out of bounds ==&gt; Unexpected exception thrown: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: threw an exception - Index out of bounds ==> Unexpected exception thrown: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:65)
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.lambda$0(CoffeeMakerTest.java:70)
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testRecipeBookIndexOutOfBounds(CoffeeMakerTest.java:65)
-</failure>
-  </testcase>
-  <testcase name="testDeleteRecipeThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testInventoryIsUpdatedAfterPurchase" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.002">
-    <failure message="expected: &lt;Coffee: 12&#10;Milk: 14&#10;Sugar: 14&#10;Chocolate: 15&#10;&gt; but was: &lt;Coffee: 18&#10;Milk: 14&#10;Sugar: 14&#10;Chocolate: 15&#10;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
-expected: <Coffee: 12
-Milk: 14
-Sugar: 14
-Chocolate: 15
-> but was: <Coffee: 18
-Milk: 14
-Sugar: 14
-Chocolate: 15
->
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testInventoryIsUpdatedAfterPurchase(CoffeeMakerTest.java:155)
-]]></failure>
-  </testcase>
-  <testcase name="testPurchaseItemThatDoesntExist" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.004"/>
+  <testcase name="testSetPricePositiveDecimalExpectFail" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0"/>
+  <testcase name="testSetPriceNegativeNumberExpectFail" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0.008"/>
+  <testcase name="testSetPriceSmallerThanMinIntExpectFail" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0"/>
+  <testcase name="testSetPriceNegativeDecimalExpectFail" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0"/>
+  <testcase name="testSetPriceNonNumericExpectFail" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0"/>
+  <testcase name="testSetPriceZeroTrue" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0"/>
+  <testcase name="testSetPricePositiveNumberTrue" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0"/>
+  <testcase name="testSetPriceLargerThanMaxIntExpectFail" classname="edu.ncsu.csc326.coffeemaker.SetPriceTest" time="0"/>
 </testsuite>
