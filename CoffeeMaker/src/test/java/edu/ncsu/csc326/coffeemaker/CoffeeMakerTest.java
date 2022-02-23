@@ -4,6 +4,7 @@ import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -21,7 +22,8 @@ public class CoffeeMakerTest {
 	private Recipe r1;
 	private Recipe r2;
 	private Recipe r3;
-
+	private Recipe r4;
+	
 	@BeforeEach
 	public void setUp() throws Exception {
 		cm = new CoffeeMaker();
@@ -51,6 +53,16 @@ public class CoffeeMakerTest {
 		r3.setAmtMilk("1");
 		r3.setAmtSugar("1");
 		r3.setPrice("75");
+		
+		//larger than inventory
+		r4 = new Recipe();
+		r4.setName("TooBig");
+		r4.setAmtChocolate("20");
+		r4.setAmtCoffee("20");
+		r4.setAmtMilk("20");
+		r4.setAmtSugar("20");
+		r4.setPrice("15");
+		
 	}
 
 	@Test
@@ -259,7 +271,7 @@ public class CoffeeMakerTest {
 		@Test
 		public void testRecipeWithDecimalMilk() {
 			try {
-				r1.setAmtCoffee("0.5");
+				r1.setAmtMilk("0.5");
 			} catch (RecipeException e) {
 				fail("Failed to set milk");
 			}
@@ -271,7 +283,7 @@ public class CoffeeMakerTest {
 		@Test
 		public void testRecipeWithDecimalSugar() {
 			try {
-				r1.setAmtMilk("0.5");
+				r1.setAmtSugar("0.5");
 			} catch (RecipeException e) {
 				fail("Failed to set sugar");
 			}
@@ -303,4 +315,127 @@ public class CoffeeMakerTest {
 			Recipe recipes[] = cm.getRecipes();
 			assertEquals(r1, recipes[0]);
 		}
+		
+
+		@Test
+		public void testRecipeWithNegativeCoffee() {
+			try {
+				r1.setAmtCoffee("-1");
+			} catch (RecipeException e) {
+				fail("Failed to set coffee");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+		
+		@Test
+		public void testRecipeWithNegativeMilk() {
+			try {
+				r1.setAmtMilk("-1");
+			} catch (RecipeException e) {
+				fail("Failed to set milk");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+		
+		@Test
+		public void testRecipeWithNegativeSugar() {
+			try {
+				r1.setAmtSugar("-1");
+			} catch (RecipeException e) {
+				fail("Failed to set sugar");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+
+		@Test
+		public void testRecipeWithNegativeChocolate() {
+			try {
+				r1.setAmtChocolate("-1");
+			} catch (RecipeException e) {
+				fail("Failed to set chocolate");
+			}
+			cm.addRecipe(r1);
+			Recipe recipes[] = cm.getRecipes();
+			assertEquals(r1, recipes[0]);
+		}
+		
+		//INVENTORY TESTS PART 2
+		@Test
+		public void testInventoryWithDecimalCoffee() {
+			Inventory inv = new Inventory();
+			assertThrows(InventoryException.class, () -> {
+				inv.addCoffee("0.5");
+			});
+		}
+		
+		@Test
+		public void testInventoryWithDecimalMilk() {
+			Inventory inv = new Inventory();
+			assertThrows(InventoryException.class, () -> {
+				inv.addMilk("0.5");
+			});
+		}
+		
+		@Test
+		public void testInventoryWithDecimalChocolate() {
+			Inventory inv = new Inventory();
+			assertThrows(InventoryException.class, () -> {
+				inv.addChocolate("0.5");
+			});
+		}
+		
+		@Test
+		public void testInventoryWithNegativeChocolate() {
+			Inventory inv = new Inventory();
+			assertThrows(InventoryException.class, () -> {
+				inv.addChocolate("-1");
+			});
+		}
+
+		@Test
+		public void testInventoryWithNegativeMilk() {
+			Inventory inv = new Inventory();
+			assertThrows(InventoryException.class, () -> {
+				inv.addMilk("-1");
+			});
+		}
+
+		@Test
+		public void testOrderLargerThanInventory() {
+			cm.addRecipe(r4);
+			int change = cm.makeCoffee("0", "15");
+			assertEquals(15, change);
+		}
+		
+		@Test
+		public void testHash() {
+			Recipe x = new Recipe();  // equals and hashCode check name field value
+		    Recipe y = new Recipe();
+		    Recipe z = new Recipe();
+		    z.setName(null);
+		    assertTrue(x.equals(y) && y.equals(x));
+		    assertTrue(x.hashCode() == y.hashCode());
+		    assertTrue(!x.equals(z) && !z.equals(x));
+		    assertTrue(x.hashCode() != z.hashCode());
+		}
+	
+		@Test
+		public void testInvalidEquality() {
+			r1.setName(null);
+			assertFalse(r1.equals(r2));
+			assertFalse(r1.equals(r1));
+		}
+		
+		@Test
+		public void testEditWhenNoRecipeExists() {
+			cm.editRecipe(0, r1);
+			assertEquals(null, cm.getRecipes()[0]);
+		}
+		
 }
